@@ -8,14 +8,15 @@ project:
         title: Single Port calibration
       - file: VNA/12.md
         title: 12 term error model
-    - title: Building NMR 
+    - title: Building NMR
       children:
-      - file: NMR/code.ipynb
+      - file: NMR/code.md
         title: Python code for coil creation
   id: 9dd43aa9-829d-4cdd-8eb6-6c91ee764e4b
   title: Lab Notebook
   github: https://github.com/SipanHovsep/Lab_notebook
-  jupyter: true
+  jupyter:
+    execute_notebooks: auto
 site:
   template: book-theme
   options:

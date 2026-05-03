@@ -1,0 +1,24 @@
+version: 1
+project:
+  toc:
+    - file: README.md
+    - title: Methods for Shifting the Calibration Reference Plane
+      children:
+      - file: VNA/1_port.md
+        title: Single Port calibration
+      - file: VNA/12.md
+        title: 12 term error model
+    - title: Building NMR 
+      children:
+      - file: NMR/code.md
+        title: Python code for coil creation
+  id: 9dd43aa9-829d-4cdd-8eb6-6c91ee764e4b
+  title: Lab Notebook
+  github: https://github.com/SipanHovsep/Lab_notebook
+  jupyter: true
+site:
+  template: book-theme
+  options:
+    style: _site/custom.css
+  parts:
+    primary_sidebar_footer: _site/footer.md

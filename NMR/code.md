@@ -2,6 +2,9 @@
 title: Code for creating the coil
 authors:
   - name: Leeor Alon, Sipan Hovsepian
+kernelspec:
+  name: python3
+  display_name: Python 3
 exports:
   - format: typst
     template: lapreprint-typst

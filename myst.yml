@@ -10,7 +10,7 @@ project:
         title: 12 term error model
     - title: Building NMR 
       children:
-      - file: NMR/code.md
+      - file: NMR/code.ipynb
         title: Python code for coil creation
   id: 9dd43aa9-829d-4cdd-8eb6-6c91ee764e4b
   title: Lab Notebook

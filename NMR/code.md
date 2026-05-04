@@ -1,14 +1,14 @@
 ---
-title: Code for creating the coil
-authors:
-  - name: Leeor Alon, Sipan Hovsepian
+jupytext:
+    text_representation:
+        extension: .md
+        format_name: myst
+        format_version: 0.13
+        jupytext_version: 1.19.1
 kernelspec:
-  name: python3
-  display_name: Python 3
-exports:
-  - format: typst
-    template: lapreprint-typst
-    output: exports/coil.pdf
+    display_name: geo
+    language: python
+    name: python3
 ---
 
 
@@ -19,7 +19,7 @@ In an ideal Vector Network Analyzer (VNA) measurement, the Device Under Test (DU
 
 
 
-```{code-cell} python
+```{code-cell} ipython3
 import matplotlib.pyplot as plt
 import numpy as np
 from numpy.linalg import norm

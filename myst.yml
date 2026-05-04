@@ -10,17 +10,13 @@ project:
         title: 12 term error model
     - title: Building NMR
       children:
-      - file: NMR/code.ipynb
+      - file: NMR/code.md
         title: Python code for coil creation
   id: 9dd43aa9-829d-4cdd-8eb6-6c91ee764e4b
   title: Lab Notebook
   github: https://github.com/SipanHovsep/Lab_notebook
   jupyter:
     execute_notebooks: auto
-    binder:
-      repo: SipanHovsep/Lab_notebook
-      provider: github
-      ref: main  # Make sure this matches your default branch name (main or master)
 site:
   template: book-theme
   options:

@@ -73,13 +73,11 @@ sensor = magpy.Sensor(position=arr_full,style_size=2)
 
 The following illustration helps to visualize the process. 
 
-:::
 
-{image} ./images/define_sensor_points_on_filled_sphere.gif
+:::{image} ./images/define_sensor_points_on_filled_sphere.gif
 :alt: Growing spheres animation
 :width: 400px
 :align: center
-
 :::
 
 ## Simulation results

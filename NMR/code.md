@@ -13,10 +13,31 @@ kernelspec:
 ---
 
 
-## Problem Statement
+# Simulation 
 
+Simulation part
 
-In an ideal Vector Network Analyzer (VNA) measurement, the Device Under Test (DUT) is connected directly to the VNA ports to minimize signal attenuation and phase errors. However, physical constraints often make direct connection impossible.
+## Python code
+
+pyhton code part
+
+## Simulation results
+
+# Design and Build
+
+design part
+
+## 3d printing
+
+3d printing part
+
+## winding
+
+winding part
+
+# Testing and validation
+
+testing and validation part
 
 
 

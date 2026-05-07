@@ -31,7 +31,7 @@ The following code takes the following inputs:
 * **`base_coord`** $\rightarrow$ An $[x, y, z]$ array representing the center point (offset) of the sphere.
 
 And returns
-* **`Sensor`**  $\rightarrow$ The final object containing the calculated coordinate points.
+* **`Sensor`**  $\rightarrow$ Convenient container for storing 3D position data
 
 ```python
 import numpy as np
@@ -74,6 +74,33 @@ sensor = magpy.Sensor(position=arr_full,style_size=2)
 The following illustration helps to visualize the process. 
 
 <img src="./images/define_sensor_points_on_filled_sphere.gif" width="400px" style="display:block; margin:auto;" />
+
+
+
+## Cost function
+
+The purpose of Cost function is to calculate field inhomogeneity (in ppm) and mean magnetic field. 
+
+The mathematical formulation is:
+$$
+\eta = \left| \frac{B_{max} - B_{min}}{B_{mean}} \right| \times 10^6
+$$
+
+
+ ```Python
+ def cost_func(B,component=0):
+    # Bcomponent=0 for X, Bcomponent=1 for Y and Bcomponent=2 for Z
+    Bcomp_flat = B[:,component]   
+    # Bcomp_flat = Bcomp.flatten()
+    meanfield = np.mean(B[:,component]) 
+    eta = 1e6*np.abs((np.max(Bcomp_flat)-np.min(Bcomp_flat))/(meanfield))  
+    return eta, meanfield 
+ ```
+
+## Calculating and storing magnetic field values in 3D
+
+The following code:
+
 
 ## Simulation results
 

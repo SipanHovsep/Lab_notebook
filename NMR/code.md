@@ -270,6 +270,46 @@ Effect of normalization
 ::: 
 
 
+### Calculating curve length
+
+The exact arc length of a 3D curve is:
+
+$$L = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2 + \left(\frac{dz}{dt}\right)^2} \, dt$$
+
+This function approximates that integral by replacing it with a finite sum:
+
+$$L \approx \sum_{i=1}^{n-1} \sqrt{(x_{i+1}-x_i)^2 + (y_{i+1}-y_i)^2 + (z_{i+1}-z_i)^2}$$
+
+
+The code for realization is:
+
+```Python
+    """
+    Calculates the approximate length of a 3D curve defined by a sequence of points.
+
+    Args:
+        points (np.ndarray): A NumPy array of shape (n, 3) where n is the number of points,
+                             and each row represents the (x, y, z) coordinates of a point.
+
+    Returns:
+        float: The approximate length of the curve.
+    """
+    if points.shape[0] < 2:
+        return 0.0  # A curve needs at least two points to have a length
+
+    # Calculate the differences between consecutive points
+    diffs = np.diff(points, axis=0)
+
+    # Calculate the Euclidean distance for each segment
+    segment_lengths = np.sqrt(np.sum(diffs**2, axis=1))
+
+    # Sum the lengths of all segments to get the total curve length
+    total_length = np.sum(segment_lengths)
+
+    return total_length
+```
+
+
 ## Simulation results
 
 # Design and Build

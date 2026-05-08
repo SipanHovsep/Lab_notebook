@@ -284,16 +284,7 @@ $$L \approx \sum_{i=1}^{n-1} \sqrt{(x_{i+1}-x_i)^2 + (y_{i+1}-y_i)^2 + (z_{i+1}-
 The code for realization is:
 
 ```Python
-    """
-    Calculates the approximate length of a 3D curve defined by a sequence of points.
 
-    Args:
-        points (np.ndarray): A NumPy array of shape (n, 3) where n is the number of points,
-                             and each row represents the (x, y, z) coordinates of a point.
-
-    Returns:
-        float: The approximate length of the curve.
-    """
     if points.shape[0] < 2:
         return 0.0  # A curve needs at least two points to have a length
 
